@@ -28,8 +28,18 @@ all:
         },
         src: ['test/*.js']
       }
-    }
-
+    },
+copy: {
+  main: {
+    files: [
+      
+      // includes files within path 
+     // {expand: true, src: ['src/**'], dest: 'deploy/', filter: 'isFile'},
+ {expand: true, cwd: 'src/', src: ['**'], dest: 'deploy/'},
+    ],
+  },
+},
+	
 });
 
 
@@ -39,7 +49,9 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-jshint');
 
     grunt.loadNpmTasks('grunt-mocha-test');
-grunt.registerTask('default',['uglify','jshint','mochaTest']);
+	grunt.loadNpmTasks('grunt-contrib-copy-force');
+
+grunt.registerTask('default',['uglify','jshint','mochaTest','copy']);
 };
 
 
