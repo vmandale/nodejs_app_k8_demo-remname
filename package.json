@@ -2,11 +2,12 @@
   "name": "node_sample_app",
   "description": "hello jenkins test app",
   "version": "0.0.1",
+  "scripts": {
+    "test": "istanbul cover test/test.js"
+  },
   "private": true,
   "dependencies": {
-    "express": "3.12.0",
-	   "body-parser": "~1.12.0",
-  
+    "body-parser": "~1.12.0",
     "cookie-parser": "~1.3.4",
     "debug": "~2.1.1",
     "expect.js": "^0.3.1",
@@ -18,7 +19,7 @@
     "grunt-mocha": "^1.0.2",
     "grunt-mocha-test": "^0.12.7",
     "jshint": "^2.9.2",
-    "jshint-html-reporter": "^0.2.4",
+    "jshint-html-reporter": "^0.2.5",
     "mocha": "^2.4.5",
     "mocha-istanbul": "^0.2.0",
     "morgan": "~1.5.1",
@@ -33,12 +34,23 @@
     "supertest": "^1.2.0"
   },
   "devDependencies": {
-    "mocha": "1.20.1",
-    "supertest": "0.13.0",
-	 "chai": "^3.5.0",
+    "chai": "^3.5.0",
     "chai-http": "^2.0.1",
+    "good-mocha-html-reporter": "^2.0.1",
+    "grunt-exec": "^3.0.0",
+    "grunt-html-html-reporter": "^0.2.2",
+    "grunt-mocha": "^1.0.4",
+    "grunt-mocha-client": "0.0.2",
+    "grunt-shell": "^2.1.0",
+    "gulp": "^3.9.1",
+    "gulp-istanbul": "^1.1.3",
+    "gulp-jshint": "^2.1.0",
+    "gulp-jshint-html-reporter": "^0.1.3",
+    "gulp-mocha": "^5.0.0",
     "istanbul": "^0.4.3",
-    "mongoose": "^4.1.3"
-	
+    "jshint-stylish": "^2.2.1",
+    "mocha": "1.20.1",
+    "mongoose": "^4.1.3",
+    "supertest": "0.13.0"
   }
 }

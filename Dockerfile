@@ -1,8 +1,10 @@
-FROM node:6.9.2
-EXPOSE 8080
+FROM node:latest
 RUN mkdir nodejs_sample_app
 WORKDIR nodejs_sample_app
 COPY app.js .
 COPY package.json .
-COPY node_modules .
-CMD node app.js
+RUN npm install
+RUN npm install pm2 -g
+RUN npm pack
+EXPOSE 3000
+ENTRYPOINT ["pm2-docker", "start","app.js"]

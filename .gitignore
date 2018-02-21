@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 node_modules/
 
 results.txt
 dest/
 deploy/
+=======
+node_modules
+>>>>>>> 31b2aea0e8aa318c3f8fdea82a365ca6126584b8
