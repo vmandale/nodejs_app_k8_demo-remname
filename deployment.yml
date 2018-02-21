@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nodejs-rest-api
+  namespace: monitoring
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: nodejs-rest-api
+    spec:
+      containers:
+      - name: nodejs-rest-api
+        image: madhavikh/nodejs_app:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+
